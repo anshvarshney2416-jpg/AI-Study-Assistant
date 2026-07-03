@@ -177,7 +177,11 @@ Through this project I learned:
 
 ## ⭐ Support
 
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
+⭐ If you found this project useful, please consider giving it a Star on GitHub—it really helps support the project!
+
+🍴 Feel free to Fork the repository, try it yourself, and contribute if you have ideas for improvements.
+
+💬 I'd also love to hear your feedback and experience after using it. Your suggestions will help me make it even better.
 
 It motivates me to build more open-source AI projects.
 
