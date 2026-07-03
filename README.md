@@ -204,7 +204,7 @@ Through this project I learned:
 **Ansh Varshney**
 
 - GitHub: https://github.com/anshvarshney2416-jpg
-- LinkedIn: *(Add your LinkedIn profile here)*
+- LinkedIn: www.linkedin.com/in/ansh-varshney-033842378
 
 ---
 
