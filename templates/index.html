@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 AI Study Assistant</h1>
+        <p class="subtitle">Learn Smarter with AI</p>
+
+        {% if pdf_uploaded %}
+        <div class="success">
+            ✅ PDF Loaded Successfully
+        </div>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data" id="chatForm">
+
+            <!-- Subject -->
+
+            <label>📚 Subject</label>
+
+            <select name="subject" required>
+                <option value="">Select Subject</option>
+                <option>Computer Science</option>
+                <option>Mathematics</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+                <option>Biology</option>
+                <option>English</option>
+            </select>
+
+            <!-- Difficulty -->
+
+            <label>🎓 Difficulty</label>
+
+            <select name="difficulty" required>
+                <option value="">Select Difficulty</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+
+            <!-- PDF Upload -->
+
+            <label>📄 Upload Study Notes (PDF)</label>
+
+            <input
+                type="file"
+                name="pdf_file"
+                accept=".pdf">
+
+            <!-- Question -->
+
+            <label>💬 Ask Your Question</label>
+
+            <input
+                type="text"
+                name="question"
+                placeholder="Type your question here..."
+                autocomplete="off">
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="ask">
+                    🚀 Ask AI
+                </button>
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="notes">
+                    📝 Generate Notes
+                </button>
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="quiz">
+                    ❓ Generate Quiz
+                </button>
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="flashcards">
+                    💡 Flashcards
+                </button>
+
+                <button
+                    type="button"
+                    onclick="clearChat()">
+                    🗑 Clear Chat
+                </button>
+
+            </div>
+
+        </form>
+
+        <div id="loading">
+            🤖 AI is thinking...
+        </div>
+
+        <div class="chat" id="chatBox">
+
+            {% if chat_history %}
+
+                {% for chat in chat_history %}
+
+                <div class="user">
+
+                    <strong>👤 You</strong>
+
+                    <p>{{ chat.question }}</p>
+
+                </div>
+
+                <div class="ai">
+
+                    <strong>🤖 AI</strong>
+
+                    <p>{{ chat.answer }}</p>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="welcome">
+
+                    <h2>👋 Welcome!</h2>
+
+                    <p>Upload your study notes or ask any academic question.</p>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
