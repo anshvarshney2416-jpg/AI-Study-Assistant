@@ -131,6 +131,10 @@ http://127.0.0.1:5000
 
 ---
 
+## 🌐 Live Demo
+
+https://ai-study-assistant-8kw8.onrender.com
+
 
 ## 🎯 Future Improvements
 
