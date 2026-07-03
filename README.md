@@ -131,43 +131,6 @@ http://127.0.0.1:5000
 
 ---
 
-## 📷 Screenshots
-
-### 🏠 Home Page
-
-> Add a screenshot here
-
----
-
-### 📄 PDF Upload
-
-> Add a screenshot here
-
----
-
-### 🤖 AI Response
-
-> Add a screenshot here
-
----
-
-### 📝 Generated Notes
-
-> Add a screenshot here
-
----
-
-### ❓ Generated Quiz
-
-> Add a screenshot here
-
----
-
-### 💡 Flashcards
-
-> Add a screenshot here
-
----
 
 ## 🎯 Future Improvements
 
